@@ -4,8 +4,25 @@
   	<meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <link href="/script/bootstrap.css" rel="stylesheet" />
+    <link href="/script/bootstrap.js" rel="stylesheet" />
   </head>
   <body>
+    <div class="conatiner">
+      <form>
+        <div class="row">
+          <div class="col">
+        <label for="firstname">first name:</label>
+        <input class="form control" type="text" id="firstname" name="FirstnName" placeholder=""/>
+       <lable for="dob">Date of Birth</lable>
+        <input class="form-control" type="date" id="dob" name="DOB"placeholder='enteryourDD/MM/YY' />
+        
+        <textarea class="form-control" rows="5">my test</textarea>
+        <div class="pt-3 pb-3">
+        <button type="button" class="btn btn-success">send</button>
+        </div>
+        </div>
+      </form></div>
+      </div>
     <!--lesson 10-->
     <table class="table table-striped table-bordered table-hover">
       <thead>
@@ -117,14 +134,5 @@
         console.log("it is a odd num")
       }
     </script>
-    <!--text number date-->
-    <form>
-      Name:
-      <input type="text" id="firstname" name="FirstnName" placeholder=""/>
-      dob
-      <input type="date" id="dob" name="DOB"placeholder='enteryourDD/MM/YY' />
-      <!--reset button submit-->
-      <button type="button" class="btn btn-success">send</button>
-    </form>
   </body>
 </html>

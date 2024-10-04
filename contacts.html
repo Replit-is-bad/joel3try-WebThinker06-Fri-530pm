@@ -50,17 +50,25 @@
 		<!-- Key section -->
 		<form class="container py-3">
 			<div class="row gy-3">
-				<!-- Label: Name*
-						 Text Input field -->
-
-				<!-- Label: Email Address*
-						 Email Input field -->
-
-				<!-- Label: Subject*
-						 Text Input field with placeholder text "Enquiry on how to code"-->
+				<div class="col-6">
+					<lable for="firstname">Name:</lable>
+					<input class="form-control" type="text" id="firstname" name="FirstnName" placeholder="Name"/>
+				</div>
+					<div class="col-6">
+						<lable for="Email">Email:</lable>
+						<input class="form-control" type="text" id="Email" name="Email" placeholder="Email"/>
+					</div>
+						<lable for="Subject">Subject:</lable>
+						<input class="form-control" type="text" id="Subject" name="Subject" placeholder="Subject"/>
+					<div class="row-5">
+						<lable for="subject">Subject:</lable>
+						<textarea class="form-control" type="comments" rows="5" id="comments" name="subject" placeholder="comments"></textarea>
+					</div>
+					<button type="button" class="btn btn-success">PASS</button>
 
 				<!-- Label: Subject*
 						 Textarea field with the row attribute of value 5-->
+				
 			</div>
 			<!-- Code a blue "Send" button inside a <div> according to the criteria stated -->
 		</form>
