@@ -13,12 +13,14 @@
           <div class="col">
         <label for="firstname">first name:</label>
         <input class="form control" type="text" id="firstname" name="FirstnName" placeholder=""/>
-       <lable for="dob">Date of Birth</lable>
+        <p id="firstnameError" class="text-danger d-none">Name cannot be left empty</p>
+
+       <label for="dob">Date of Birth</lable>
         <input class="form-control" type="date" id="dob" name="DOB"placeholder='enteryourDD/MM/YY' />
         
         <textarea class="form-control" rows="5">my test</textarea>
         <div class="pt-3 pb-3">
-        <button type="button" class="btn btn-success">send</button>
+        <button type="button" class="btn btn-success" onclick="validate();">send</button>
         </div>
         </div>
       </form></div>
@@ -132,6 +134,28 @@
       }
       else{
         console.log("it is a odd num")
+      }
+    </script>
+    <script>
+      let validate = () =>{
+        //alert("i got here");
+        let inputfirstname=document.getElementById('firstname');
+        console.log("I got this:"+ inputfirstname.value);
+
+        if(inputfirstname.value.length > 0) {
+          inputfirstname.classList='form-control is-valid'
+          document.getElementById('firstnameError').classList="text-danger d-none";
+        }else{
+          inputfirstname.classList='form-control is-invalid';
+          document.getElementById("firstnameError").classList='text-danger';
+        }
+      }
+       if(document.getElementsByClassName("is-invalid").length > 0){
+        console.log('please check your form input values!');
+
+      }
+        else{
+          console.log('form is submitted')
       }
     </script>
   </body>

@@ -52,11 +52,13 @@
 			<div class="row gy-3">
 				<div class="col-6">
 					<lable for="firstname">Name:</lable>
-					<input class="form-control" type="text" id="firstname" name="FirstnName" placeholder="Name"/>
+					<input class="form-control is-invalid" type="text" id="firstname" name="FirstnName" placeholder="Name"/>
+					<p id="firstnameError" class="text-danger">Name cannot be left empty</p>
 				</div>
 					<div class="col-6">
 						<lable for="Email">Email:</lable>
-						<input class="form-control" type="text" id="Email" name="Email" placeholder="Email"/>
+						<input class="form-control " type="text" id="Email" name="Email" placeholder="Email"/>
+						<p id="EmailError" class="text-danger">Email cannot be left empty</p>
 					</div>
 						<lable for="Subject">Subject:</lable>
 						<input class="form-control" type="text" id="Subject" name="Subject" placeholder="Subject"/>
@@ -70,10 +72,44 @@
 						 Textarea field with the row attribute of value 5-->
 				
 			</div>
-			<!-- Code a blue "Send" button inside a <div> according to the criteria stated -->
 		</form>
 	</article>
 	<!-- End of coding region -->
 	<footer class="bg-dark text-light"><div class="container py-2 pb-4">Done by Computhink Kids SG.</div></footer>
-</body>
+	<script>
+		
+		  if(inputfirstname.value.length > 0) {
+			inputfirstname.classList='form-control is-valid'
+			document.getElementById('firstnameError').classList="text-danger d-none";
+		  }else{
+			inputfirstname.classList='form-control is-invalid';
+			document.getElementById("firstnameError").classList='text-danger';
+		  }
+		
+		 if(document.getElementsByClassName("is-invalid").length > 0){
+		  console.log('please check your form input values!');
+  
+		}
+		  else{
+			console.log('form is submitted')
+		}
+	  </script>
+	  <script>
+		  if(inputEmail.value.length > 0) {
+			inputEmail.classList='form-control is-valid'
+			document.getElementById('EmailError').classList="text-danger d-none";
+		  }else{
+			inputEmail.classList='form-control is-invalid';
+			document.getElementById("EmailError").classList='text-danger';
+		  }
+		
+		 if(document.getElementsByClassName("is-invalid").length > 0){
+		  console.log('please check your form input values!');
+  
+		}
+		  else{
+			console.log('form is submitted')
+		}
+	  </script>
+	</body>
 </html>
