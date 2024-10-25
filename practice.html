@@ -167,5 +167,16 @@
       }
     </script>
     <script src="script/practice.js"></script>
+    
+      <canvas id="drawingboard" width="400" height="800" class="boder boder-dark"></canvas>
+      <script>
+        const canvas = document.getElementById('drawingboard');
+
+        let ctx =canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.moveTo(0,0);
+        ctx.lineTo(100,100);
+        ctx.stroke();
+      </script>
   </body>
 </html>
