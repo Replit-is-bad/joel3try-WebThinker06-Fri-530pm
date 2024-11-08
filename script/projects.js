@@ -1,9 +1,7 @@
 let canvas, ctx;
 let centerX, centerY;
 let ballX, ballY;
-let dx, dy;
-
-
+let dX, dY; // the change in the values of ballX, and ballY
 
 let drawBall = () => {
     ctx.lineWidth = 10;
@@ -16,45 +14,40 @@ let drawBall = () => {
     ctx.fill();
 }
 
-
 let animating = () => {
+    if (document.getElementById("playAnimation").checked) {
+        // erase everything
+        ctx.reset();
 
-	if (document.getElementById("playAnimation").checked) {
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		drawBall();
+        // if conditions
+        if (ballX < 0 || ballX > canvas.width) {
+            dX = -dX;
+        }
+        if (ballY < 0 || ballY > canvas.height) {
+            dY = -dY
+        }
 
-	
-		if (ballX < 0 || ballx> canvas.width) {
-			dx = -dx;
-		}
-		
-		if (ballY < 0 || ballY >canvas.height) {
-			dy = -dy;
-		}
-
-
-		x += dx;
-		y += dy;
+        ballX = ballX + dX;
+        ballY = ballY + dY;
         drawBall();
-
-    requestAnimationFrame(animating);
-	}
-    window.onload = () => {
-
-        canvas = document.getElementById('canvasBoard');
-        ctx = canvas.getContext('2d');
-    
-    
-        centerX =canvas.width /2;
-        centerY =center.height /2;
-    
-        ballx = centerX
-        bally =centerY
-        dx = 2;
-        dy = -2;
-    
-        drawBall();
-        animating();
     }
-	
+    
+    requestAnimationFrame(animating); // call itself again
+}
+
+window.onload = () => {
+    canvas = document.getElementById("drawingBoard");
+    ctx = canvas.getContext("2d");
+
+    centerX = canvas.width / 2;
+    centerY = canvas.height / 2;
+
+    ballX = centerX;
+    ballY = centerY;
+
+    dX = 5; // speed of the ball
+    dY = 5; // speed of the ball
+
+    drawBall();
+    animating();
 }
