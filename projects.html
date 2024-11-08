@@ -65,11 +65,12 @@
 					<h3>Platformer Game</h3>
 					<iframe src="https://scratch.mit.edu/projects/779856092/embed" title="Platformer" width="485" height="402"></iframe>
 				</div>
-				<div>
-					<canvas id="drawingboard" width="800" height="600" class="boder boder-dark"></canvas>
-      				<script>
-       				 const canvas = document.getElementById('drawingboard');
-					</script>
+				<div class="tab-pane fade" id="canvas">
+					<canvas id="drawingboard" width="800" height="600" class="border border-dark"></canvas>
+
+						<input type="radio" name="playpause" id="pauseAnimation" /> Pause Animation
+						<input type="radio" name="playpause" id="playAnimation" checked/>Play Animation
+					</div>
 				</div>
 		</div>
 	</article>

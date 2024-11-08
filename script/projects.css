@@ -1,5 +1,5 @@
 #banner {
-	background-image: url('/img/banner-gaming-2.png');
+	background-image: url('../img/banner-gaming(2).png');
 	background-size: cover;
 	background-position: center center;
 	height: 40vh;
@@ -8,4 +8,8 @@
 	#banner {
 		height:60vh;
 	}
+}
+
+.nav .rounded-pill {
+	border-radius: var(--bs-border-radius-pill) !important;
 }
