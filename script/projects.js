@@ -4,11 +4,16 @@ let ballX, ballY;
 let dx, dy;
 
 
+
 let drawBall = () => {
-	ctx.beginPath();
-	ctx.arc(centerX, centerY, 0, Math.PI * 2);
-	ctx.fillStyle = "#0095DD";
-	ctx.fill();
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = "rgb(255,0,0)";
+    ctx.fillStyle = "rgb(0,0,255)";
+    
+    ctx.beginPath();
+    ctx.arc(ballX, ballY, 25, 0, 2 * Math.PI);
+    ctx.stroke();
+    ctx.fill();
 }
 
 
